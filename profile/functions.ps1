@@ -29,5 +29,5 @@ function global:Start-MySQL {
 }
 
 function global:Start-Redis {
-    docker run --name redis -d redis
+    docker run --name redis -d -p 6379:6379 redis
 }
