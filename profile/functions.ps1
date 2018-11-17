@@ -28,3 +28,6 @@ function global:Start-MySQL {
     Start-Service -Name "MySQL80"
 }
 
+function global:Start-Redis {
+    docker run --name redis -d redis
+}
