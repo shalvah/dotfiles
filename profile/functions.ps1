@@ -20,11 +20,43 @@ function global:Add-EnvPath([String] $path) {
     $env:PATH = $env:PATH + ";$path"
 }
 
-function global:Start-Apache {
-    Start-Service -Name "Apache"
+function global:Start-Apache ([switch] $Start, [switch] $Stop = $False, [switch] $Restart = $False) {
+    if ($Start) {
+        Start-Service -Name "Apache"
+    }
+    elseif ($Stop) {
+        Stop-Service -Name "Apache"
+    }
+    elseif ($Restart) {
+        Restart-Service -Name "Apache"
+    }
+}
+
+function global:Run-MySQL ([switch] $Start, [switch] $Stop, [switch] $Restart) {
+    if ($Start) {
+        Start-Service -Name "MySQL80"
+    }
+    elseif ($Stop) {
+        Stop-Service -Name "MySQL80"
+    }
+    elseif ($Restart) {
+        Restart-Service -Name "MySQL80"
+    }
+}
+
+function global:Run-Redis ([switch] $Start, [switch] $Stop) {
+    if ($Start) {
+        docker run --name redis -d -p 6379:6379 redis
+    }
+    elseif ($Stop) {
+        docker rm (docker ps  -f name=redis -q) -f 
+    }
 }
 
 function global:Start-MySQL {
-    Start-Service -Name "MySQL80"
+    Run-MySQL -Start
 }
 
+function global:Start-Redis {
+    Run-Redis -Start
+}

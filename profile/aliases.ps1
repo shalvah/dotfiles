@@ -13,3 +13,7 @@ Set-Alias mkd Enter-NewDirectory -Scope Global
 
 function global:GoTo-ProjectsFolder { Set-Location ~\Projects }
 Set-Alias proj global:GoTo-ProjectsFolder -Scope Global
+
+Set-Alias redis Start-Redis -Scope Global
+
+Set-Alias mysql Start-MySQL -Scope Global
