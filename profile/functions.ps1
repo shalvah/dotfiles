@@ -8,9 +8,16 @@ function global:Enter-NewDirectory([String] $path) {
     Set-Location $path
 }
 
+# ~: Go Home
+function global:~ { Set-Location ~ }
+
+function global:Set-LocationToParent { Set-Location .. };
+
 function global:Create-File ([String] $file) {
     "" | Out-File $file
 }
+
+function global:GoTo-ProjectsFolder { Set-Location D:\Projects }
 
 function global:Add-EnvPath([String] $path) { 
     if (!(Test-Path $path)) { 
@@ -59,4 +66,7 @@ function global:Start-MySQL {
 
 function global:Start-Redis {
     Run-Redis -Start
+}
+function global:Enter-RedisCli ([string] $Host = 'localhost', [string] $Port = "6379") {
+    docker run -it --rm redis redis-cli -h "$Host" -p $Port
 }
