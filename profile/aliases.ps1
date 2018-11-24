@@ -15,4 +15,6 @@ Set-Alias redis Start-Redis -Scope Global
 
 Set-Alias mysql Start-MySQL -Scope Global
 
+Set-Alias apache Start-Apache -Scope Global
+
 Set-Alias redis-cli Enter-RedisCli -Scope Global
