@@ -16,12 +16,11 @@ choco install -y composer ngrok
 choco install -y apache-httpd --params '"/installLocation:C:\Apache"'
 # Composer is upgraded by running composer self-update
 choco pin add --name composer
-choco install docker-for-windows --pre
 
 choco install -y origin steam
-choco install activepresenter
+choco install -y activepresenter
 
 # Install manually:
-# Redis on Windows, Redis Desktop Manager, Unified Remote, FDM, VSCode, MySQL 8
+# Redis on Windows, Redis Desktop Manager, Unified Remote, FDM, VSCode, MySQL 8, Docker for Windows
 # Port game data (FIFA, GTA)
 # Port IDE and VsCode setttings
