@@ -72,6 +72,6 @@ function global:Start-MySQL {
 function global:Start-Redis {
     Run-Redis -Start
 }
-function global:Enter-RedisCli ([string] $Host = 'localhost', [string] $Port = "6379") {
-    docker run -it --rm redis redis-cli -h "$Host" -p $Port
+function global:Enter-RedisCli ([string] $RedisHost = "localhost", [string] $RedisPort = "6379") {
+    docker run -it --rm redis redis-cli -h "$RedisHost" -p $RedisPort
 }
