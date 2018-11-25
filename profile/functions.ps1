@@ -75,3 +75,7 @@ function global:Start-Redis {
 function global:Enter-RedisCli ([string] $RedisHost = "localhost", [string] $RedisPort = "6379") {
     docker run -it --rm redis redis-cli -h "$RedisHost" -p $RedisPort
 }
+
+function global:Sync-Profile {
+    Copy-Item ~\dotfiles\profile\* ~\Documents\WindowsPowerShell\
+}
