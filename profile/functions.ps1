@@ -64,7 +64,6 @@ function global:Start-Apache {
     Run-Apache -Start
 }
 
-
 function global:Start-MySQL {
     Run-MySQL -Start
 }
