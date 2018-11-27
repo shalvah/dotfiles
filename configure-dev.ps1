@@ -7,8 +7,10 @@ Remove-Variable nodeLtsVersion
 
 ### Node Packages
 Write-Host "Installing Node Packages..." -ForegroundColor "Yellow"
-npm install -g serverless  express-generator cross-env
+npm install -g serverless express-generator cross-env
 npm update npm
+
+composer global require hirak/prestissimo
 
 $env:EDITOR="code"
 $env:GIT_EDITOR=$env:EDITOR
