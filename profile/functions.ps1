@@ -53,7 +53,7 @@ function global:Run-MySQL ([switch] $Start, [switch] $Stop, [switch] $Restart) {
 
 function global:Run-Redis ([switch] $Start, [switch] $Stop) {
     if ($Start) {
-        docker run --name redis -d -p 6379:6379 redis
+        docker run --name redis -d -p 6379:6379 -v d:/Docker/redis/data:/data redis redis-server --appendonly yes
     }
     elseif ($Stop) {
         docker rm (docker ps  -f name=redis -q) -f 
