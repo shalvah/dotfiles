@@ -17,7 +17,13 @@ function global:Create-File ([String] $file) {
     "" | Out-File $file
 }
 
-function global:GoTo-ProjectsFolder { Set-Location ~\Projects }
+function global:GoTo-ProjectsFolder ([String] $path) {
+    if ($null -eq $path) {
+        Set-Location ~\Projects
+    } else {
+        Set-Location "~\Projects\$path"
+    }
+}
 
 function global:Add-EnvPath([String] $path) { 
     if (!(Test-Path $path)) { 
