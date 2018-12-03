@@ -1,6 +1,6 @@
 # Add a new entry to virtual hosts file
-function global:Add-VHost ([String] $host) {
-    Add-Content -Path $env:windir\system32\drivers\etc\hosts -Value $host
+function global:Add-VHost ([String] $NewHostName) {
+    Add-Content -Path $env:windir\system32\drivers\etc\hosts -Value "127.0.0.1 $NewHostName"
 }
 
 function global:Enter-NewDirectory([String] $path) {
