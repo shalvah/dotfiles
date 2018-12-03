@@ -11,6 +11,7 @@ npm install -g serverless express-generator cross-env
 npm update npm
 
 composer global require hirak/prestissimo
+composer global require psy/psysh
 
 $env:EDITOR="code"
 $env:GIT_EDITOR=$env:EDITOR
