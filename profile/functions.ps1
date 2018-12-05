@@ -19,11 +19,11 @@ function global:Create-File ([String] $file) {
 
 function global:GoTo-ProjectsFolder ([String] $path) {
     if ($null -eq $path) {
-        Set-Location ~\Projects
+        Set-Location $env:ProjectsPath
     } elseif ($path -eq "ls") {
-        Get-ChildItem ~\Projects\*\*
-    }else {
-        Set-Location "~\Projects\$path"
+        Get-ChildItem $env:ProjectsPath\*\*
+    } else {
+        Set-Location "$env:ProjectsPath\$path"
     }
 }
 
@@ -61,7 +61,7 @@ function global:Run-MySQL ([switch] $Start, [switch] $Stop, [switch] $Restart) {
 
 function global:Run-Redis ([switch] $Start, [switch] $Stop) {
     if ($Start) {
-        docker run --name redis -d -p 6379:6379 -v d:/Docker/redis/data:/data redis redis-server --appendonly yes
+        docker run --name redis -d -p 6379:6379 -v $env:DockerVolumes/redis/data:/data redis redis-server --appendonly yes
     }
     elseif ($Stop) {
         docker rm (docker ps  -f name=redis -q) -f 
