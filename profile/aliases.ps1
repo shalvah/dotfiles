@@ -18,3 +18,7 @@ Set-Alias mysql Start-MySQL -Scope Global
 Set-Alias apache Start-Apache -Scope Global
 
 Set-Alias redis-cli Enter-RedisCli -Scope Global
+
+if (Get-Command serverless -ErrorAction SilentlyContinue) {
+    Set-Alias -Name sls -Value serverless -Option AllScope -Scope Global
+}
