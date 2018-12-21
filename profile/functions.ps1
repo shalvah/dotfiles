@@ -86,3 +86,8 @@ function global:Enter-RedisCli ([string] $RedisHost = "localhost", [string] $Red
 function global:Sync-Profile {
     Copy-Item ~\dotfiles\profile\* ~\Documents\WindowsPowerShell\
 }
+
+# Start up containers for EKA (Elasticsearch-Kibana-APM server)
+function global:Start-EKA {
+    docker-compose -f ~\dotfiles\extras\eka.docker-compose.yml up -d
+}
