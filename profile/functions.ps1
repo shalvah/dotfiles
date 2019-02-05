@@ -91,3 +91,7 @@ function global:Sync-Profile {
 function global:Start-EKA {
     docker-compose -f ~\dotfiles\extras\eka.docker-compose.yml up -d
 }
+
+function global:Kill-DockerContainers {
+    docker rm (docker ps -aq) -f
+}
