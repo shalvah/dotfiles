@@ -26,3 +26,6 @@ Remove-Variable MaximumHistoryCount
 
 Invoke-Expression "$PSScriptRoot\functions.ps1"
 Invoke-Expression "$PSScriptRoot\aliases.ps1"
+if (Test-Path -Path "$PSScriptRoot\custom.ps1") {
+    Invoke-Expression "$PSScriptRoot\custom.ps1"
+}
