@@ -9,6 +9,8 @@ Set-Alias mkcd Enter-NewDirectory -Scope Global
 
 Set-Alias touch Create-File -Scope Global
 
+Set-Alias grep Select-String -Scope Global
+
 Set-Alias proj GoTo-ProjectsFolder -Scope Global
 
 Set-Alias redis Start-Redis -Scope Global
