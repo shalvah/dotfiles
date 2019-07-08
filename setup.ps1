@@ -4,6 +4,9 @@
 # Install my own crap
 .\install.ps1
 
+# Install dev tools
+.\install-dev.ps1
+
 # Configure my dev stuff
 .\configure-dev.ps1
 
