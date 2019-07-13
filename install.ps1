@@ -5,6 +5,7 @@ $env:PATH = $env:PATH + ";$env:ALLUSERSPROFILE\chocolatey\bin"
 
 # Utilities
 choco install -y vlc 7zip f.lux GoogleChrome screentogif
+choco install -y google-backup-and-sync --ignore-checksums
 
 choco install -y origin steam
 choco install -y activepresenter
