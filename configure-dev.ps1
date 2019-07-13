@@ -13,8 +13,8 @@ npm update npm
 composer global require hirak/prestissimo
 composer global require psy/psysh
 
-$env:EDITOR="code"
-$env:GIT_EDITOR=$env:EDITOR
+$env:EDITOR = "code"
+$env:GIT_EDITOR = $env:EDITOR
 
 choco install -y cmder
 Install-Module posh-git -Scope CurrentUser

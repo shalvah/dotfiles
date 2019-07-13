@@ -1,4 +1,3 @@
-
 # Uninstall Alarms and Clock
 Get-AppxPackage "Microsoft.WindowsAlarms" -AllUsers | Remove-AppxPackage
 Get-AppXProvisionedPackage -Online | Where DisplayNam -like "Microsoft.WindowsAlarms" | Remove-AppxProvisionedPackage -Online

@@ -20,9 +20,11 @@ function global:Create-File ([String] $file) {
 function global:GoTo-ProjectsFolder ([String] $path) {
     if ($null -eq $path) {
         Set-Location $env:ProjectsPath
-    } elseif ($path -eq "ls") {
+    }
+    elseif ($path -eq "ls") {
         Get-ChildItem $env:ProjectsPath\*\*
-    } else {
+    }
+    else {
         Set-Location "$env:ProjectsPath\$path"
     }
 }
