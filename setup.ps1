@@ -2,7 +2,7 @@
 .\uninstall.ps1
 
 # Install my own crap
-.\install.ps1
+.\install-personal.ps1
 
 # Install dev tools
 .\install-dev.ps1
