@@ -1,10 +1,5 @@
-# Install Chocolatey
-Set-ExecutionPolicy Bypass
-iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) -ErrorAction Stop;
-$env:PATH = $env:PATH + ";$env:ALLUSERSPROFILE\chocolatey\bin"
-
 # Utilities
-choco install -y vlc 7zip f.lux GoogleChrome screentogif
+choco install -y vlc 7zip f.lux screentogif
 choco install -y google-backup-and-sync --ignore-checksums
 
 choco install -y origin steam
