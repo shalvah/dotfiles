@@ -9,9 +9,13 @@ choco install -y git.install --params '"/GitOnlyOnPath /NoShellIntegration"'
 choco install -y php --params '"/ThreadSafe /InstallDir:C:\PHP"'
 # Exclude PHP from auto upgrades
 choco pin add --name php
+# DOn't forget to enable PHP extensions: curl, fileinfo, intl, mbstring, mysqli, openssl, pdo_mysql, pdo_pgsql, pdo_sqlite
+
 choco install -y composer ngrok
 # Composer is upgraded by running composer self-update
 choco pin add --name composer
 choco install -y apache-httpd --params '"/installLocation:C:\Apache"'
+
+choco install -y awscli
 
 # Install VS Code (and sync extensions) manually
