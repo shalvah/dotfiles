@@ -18,14 +18,16 @@ function global:Create-File ([String] $file) {
 }
 
 function global:GoTo-ProjectsFolder ([String] $path) {
+    $ProjectsPath = if ($null -eq $env:ProjectsPath) { "C:\Users\shalvah\Projects" } else { $env:ProjectsPath };
+
     if ($null -eq $path) {
-        Set-Location $env:ProjectsPath
+        Set-Location $ProjectsPath
     }
     elseif ($path -eq "ls") {
-        Get-ChildItem $env:ProjectsPath\*\*
+        Get-ChildItem $ProjectsPath\*\*
     }
     else {
-        Set-Location "$env:ProjectsPath\$path"
+        Set-Location "$ProjectsPath\$path"
     }
 }
 
