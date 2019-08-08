@@ -9,7 +9,8 @@ choco install -y git.install --params '"/GitOnlyOnPath /NoShellIntegration"'
 choco install -y php --params '"/ThreadSafe /InstallDir:C:\PHP"'
 # Exclude PHP from auto upgrades
 choco pin add --name php
-# DOn't forget to enable PHP extensions: curl, fileinfo, intl, mbstring, mysqli, openssl, pdo_mysql, pdo_pgsql, pdo_sqlite
+# DOn't forget to enable PHP extensions: curl, fileinfo, intl, mysqli, pdo_mysql, pdo_pgsql, pdo_sqlite
+# openssl and mbstring may already be enabled
 
 choco install -y composer ngrok
 # Composer is upgraded by running composer self-update
