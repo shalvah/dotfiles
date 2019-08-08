@@ -25,7 +25,7 @@ git clone https://github.com/powerline/fonts.git --depth=1
 Set-Location fonts
 .\install.ps1
 Set-Location ..
-Remove-Item -Path fonts -Recurse
+Remove-Item -Path fonts -Recurse -Force
 
 # Enable Developer Mode
 Set-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" "AllowDevelopmentWithoutDevLicense" 1
