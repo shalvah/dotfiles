@@ -93,7 +93,8 @@ function global:Sync-Profile {
 
 # Start up containers for EKA (Elasticsearch-Kibana-APM server)
 function global:Start-EKA {
-    docker-compose -f ~\dotfiles\extras\eka.docker-compose.yml up -d
+    $composeFilePath = Resolve-Path "~\dotfiles\extras\eka.docker-compose.yml"
+    docker-compose -f $composeFilePath.Path --project-name eka up -d
 }
 
 function global:Kill-DockerContainers {

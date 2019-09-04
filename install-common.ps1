@@ -1,6 +1,6 @@
 # Install Chocolatey
 Set-ExecutionPolicy Bypass
-iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) -ErrorAction Stop;
+Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) -ErrorAction Stop;
 $env:PATH = $env:PATH + ";$env:ALLUSERSPROFILE\chocolatey\bin"
 
 choco install -y postman nvm.portable insomnia-rest-api-client
