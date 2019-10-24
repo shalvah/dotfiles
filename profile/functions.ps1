@@ -100,3 +100,13 @@ function global:Start-EKA {
 function global:Kill-DockerContainers {
     docker rm (docker ps -aq) -f
 }
+
+function global:Update-Nodejs ([string] $Version = "latest", [switch] $WithExtraPackages) {
+    nvm install $Version
+    nvm use $Version
+    npm install -g cross-env 
+    
+    if ($WithExtraPackages) {
+        npm i -g serverless express-generator
+    }
+}
