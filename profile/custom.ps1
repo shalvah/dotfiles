@@ -13,14 +13,10 @@ function global:Get-Kube () {
 }
 
 function global:Set-Gcloud ([String] $proj) {
-    $Map = @{
-        "deimos"  = "";
-    }
-
-    gcloud config set project $Map[$proj]
+    gcloud config set project $proj
 
 }
 
 function global:Get-Gcloud () {
-    gcloud config get project
+    gcloud config get-value project
 }
