@@ -7,8 +7,6 @@ choco install -y postman nvm.portable insomnia-rest-api-client
 choco install -y jetbrainstoolbox
 choco install -y git.install --params '"/GitOnlyOnPath /NoShellIntegration"'    
 choco install -y php --params '"/ThreadSafe /InstallDir:C:\PHP"'
-# Exclude PHP from auto upgrades
-choco pin add --name php
 # DOn't forget to enable PHP extensions: curl, fileinfo, intl, mysqli, pdo_mysql, pdo_pgsql, pdo_sqlite
 # openssl and mbstring may already be enabled
 
