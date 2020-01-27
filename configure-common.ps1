@@ -1,6 +1,6 @@
 # Default to latest Node.js LTS
 nvm on
-$nodeLtsVersion = choco search nodejs-lts --limit-output | ConvertFrom-String -TemplateContent "{Name:package-name}\|{Version:1.11.1}" | Select -ExpandProperty "Version"
+$nodeLtsVersion = choco search nodejs-lts --limit-output | ConvertFrom-String -TemplateContent "{Name:package-name}\|{Version:1.11.1}" | Select-Object -ExpandProperty "Version"
 nvm install $nodeLtsVersion
 nvm use $nodeLtsVersion
 Remove-Variable nodeLtsVersion
