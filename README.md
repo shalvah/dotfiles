@@ -15,3 +15,5 @@ Set-ExecutionPolicy Bypass
 ```
 
 Note: running these scripts as-is may not work (especially for the `configure-` scripts), for instance, due to PATH updates and approval prompts. You may need to copy and paste some commands at a time.
+
+When done, cop the contents of the `profile` folder to `C:\Users\shalvah\Documents\WindowsPowerShell`

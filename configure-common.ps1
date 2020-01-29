@@ -1,20 +1,20 @@
 # Default to latest Node.js LTS
 nvm on
-$nodeLtsVersion = choco search nodejs-lts --limit-output | ConvertFrom-String -TemplateContent "{Name:package-name}\|{Version:1.11.1}" | Select-Object -ExpandProperty "Version"
+$nodeLtsVersion = "12.14.1"
 nvm install $nodeLtsVersion
 nvm use $nodeLtsVersion
 Remove-Variable nodeLtsVersion
 
 ### Node Packages
 Write-Host "Installing Node Packages..." -ForegroundColor "Yellow"
-npm install -g cross-env
+npm install -g cross-env yarn
 npm update npm
 
 composer global require hirak/prestissimo psy/psysh
 
 # May need to set these manually
-$env:EDITOR = "code"
-$env:GIT_EDITOR = $env:EDITOR
+setx EDITOR "code" /m
+setx GIT_EDITOR "code" /m
 
 choco install -y cmder
 Install-Module posh-git -Scope CurrentUser
