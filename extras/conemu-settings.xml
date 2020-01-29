@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2019-08-07 18:55:54" build="180626">
+		<key name=".Vanilla" modified="2020-01-29 23:39:53" build="191012">
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
 			<value name="StartTasksFile" type="string" data=""/>
@@ -120,8 +120,8 @@
 			<value name="Multi.SplitWidth" type="hex" data="04"/>
 			<value name="Multi.SplitHeight" type="hex" data="04"/>
 			<value name="KeyboardHooks" type="hex" data="02"/>
-			<value name="FontName" type="string" data="Meslo LG S DZ for Powerline"/>
-			<value name="FontName2" type="string" data="Meslo LG S for Powerline"/>
+			<value name="FontName" type="string" data="Fira Mono for Powerline"/>
+			<value name="FontName2" type="string" data="Consolas"/>
 			<value name="FontAutoSize" type="hex" data="00"/>
 			<value name="FontSize" type="ulong" data="24"/>
 			<value name="FontSizeX" type="ulong" data="0"/>
@@ -313,7 +313,7 @@
 			<value name="TabFlashChanged" type="long" data="8"/>
 			<value name="TabRecent" type="hex" data="00"/>
 			<value name="TabDblClick" type="ulong" data="1"/>
-			<value name="TabBtnDblClick" type="ulong" data="0"/>
+			<value name="TabBtnDblClick" type="ulong" data="2"/>
 			<value name="TabsOnTaskBar" type="hex" data="02"/>
 			<value name="TaskBarOverlay" type="hex" data="01"/>
 			<value name="TaskbarProgress" type="hex" data="01"/>
@@ -723,6 +723,10 @@
 			</key>
 			<value name="Language" type="string" data="en"/>
 			<value name="RestoreInactive" type="hex" data="00"/>
+			<value name="AnsiLogCodes" type="hex" data="00"/>
+			<value name="AutoReloadEnvironment" type="hex" data="01"/>
+			<value name="AutoTrimSingleLine" type="hex" data="00"/>
+			<value name="StatusBar.Hide.InputGrouping" type="hex" data="00"/>
 		</key>
 	</key>
 </key>
