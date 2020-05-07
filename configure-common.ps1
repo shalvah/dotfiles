@@ -13,8 +13,8 @@ npm update npm
 composer global require hirak/prestissimo psy/psysh
 
 # May need to set these manually
-setx EDITOR "code" /m
-setx GIT_EDITOR "code" /m
+setx EDITOR "code --wait" /m
+setx GIT_EDITOR "code --wait" /m
 
 choco install -y cmder
 Install-Module posh-git -Scope CurrentUser
