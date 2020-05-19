@@ -26,3 +26,5 @@ Set-Alias openssl "C:\Program Files\Git\mingw64\bin\openssl.exe" -Scope Global
 if (Get-Command serverless -ErrorAction SilentlyContinue) {
     Set-Alias -Name sls -Value serverless -Option AllScope -Scope Global
 }
+
+Set-Alias k kubectl -Scope Global
