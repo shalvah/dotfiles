@@ -14,12 +14,12 @@
 rename pc
 5. Sign in to Chrome and download this zip 
 6. uninstall crap like Microsoft Solitaire
-Clone this with Git and sync profile
+Clone this with Git and sync profile (copy profile folder to Documents\WindowsPowerShell)
 7. configure cmder
 8. Port console history. It should be in  `C:\Users\shalvah\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt` (`Get-PSReadlineOption).HistorySavePath`)
-Port aws creds
-Copy env vars for any projects
-# Port game data (Origin, Steam, Uplay, GOG, )
-# Port IDE and VsCode setttings. For VSCode, copy settings.json and keybindings.json from C:\Users\shalvah\AppData\Roaming\Code\User, or use Settings Sync
-configure startup tasks, disable services
-more settings (hibernate,  file explorer options, developer features)
+9. Port aws creds
+10. Copy env vars/secrets for any projects
+11. Port game data (Origin, Steam, Uplay, GOG, )
+12. Port IDE and VsCode setttings. For VSCode, copy settings.json and keybindings.json from C:\Users\shalvah\AppData\Roaming\Code\User, or use Settings Sync
+13. configure startup tasks, disable services
+14. more settings (hibernate,  file explorer options, developer features, clipboard)
