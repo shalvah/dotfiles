@@ -1,6 +1,6 @@
 # Default to latest Node.js LTS
 nvm on
-$nodeLtsVersion = "12.14.1"
+$nodeLtsVersion = "14.6.0"
 nvm install $nodeLtsVersion
 nvm use $nodeLtsVersion
 Remove-Variable nodeLtsVersion
