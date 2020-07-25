@@ -19,7 +19,9 @@ Clone this with Git and sync profile (copy profile folder to Documents\WindowsPo
 8. Port console history. It should be in  `C:\Users\shalvah\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt` (`Get-PSReadlineOption).HistorySavePath`)
 9. Port aws creds
 10. Copy env vars/secrets for any projects
-11. Port game data (Origin, Steam, Uplay, GOG, )
-12. Port IDE and VsCode setttings. For VSCode, copy settings.json and keybindings.json from C:\Users\shalvah\AppData\Roaming\Code\User, or use Settings Sync
-13. configure startup tasks, disable services
-14. more settings (hibernate,  file explorer options, developer features, clipboard)
+11. Port IDE and VsCode setttings. For VSCode, copy settings.json and keybindings.json from C:\Users\shalvah\AppData\Roaming\Code\User, or use Settings Sync
+12. configure startup tasks, disable services
+13. more settings (hibernate,  file explorer options, developer features, clipboard)
+14. Port game data (Origin, GOG, Steam, Uplay, Epic Games)
+15. Port save game data
+16. Port game captures
