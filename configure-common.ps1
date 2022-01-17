@@ -7,10 +7,10 @@ Remove-Variable nodeLtsVersion
 
 ### Node Packages
 Write-Host "Installing Node Packages..." -ForegroundColor "Yellow"
-npm install -g cross-env yarn
+npm install -g cross-env yarn serverless redis-commander
 npm update npm
 
-composer global require hirak/prestissimo psy/psysh
+composer global require psy/psysh
 
 # May need to set these manually
 setx EDITOR "code --wait" /m
