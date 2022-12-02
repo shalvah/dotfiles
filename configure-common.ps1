@@ -15,7 +15,6 @@ composer global require psy/psysh
 setx EDITOR "code --wait" /m
 setx GIT_EDITOR "code --wait" /m
 
-choco install -y cmder
 Install-Module posh-git -Scope CurrentUser
 Install-Module oh-my-posh -Scope CurrentUser
 
