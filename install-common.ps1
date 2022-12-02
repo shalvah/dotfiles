@@ -22,4 +22,6 @@ msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
 
 # Install WinCompose http://wincompose.info/
 
+# Install DevToys: https://devtoys.app/
+
 # Install Ruby
