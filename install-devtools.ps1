@@ -20,7 +20,7 @@ choco install -y apache-httpd --params '"/installLocation:C:\Apache"'
 
 msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
 
-# Install WinCompose http://wincompose.info/
+# Ray (http://myray.app), VSCode, Docker for Windows, Google Cloud SDK, 
 
 # Install DevToys: https://devtoys.app/
 
