@@ -1,6 +1,6 @@
 Import-Module posh-git
-Import-Module oh-my-posh
-Set-Theme Honukai
+
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH\Honukai.omp.json" | Invoke-Expression
 
 # Complete from history whe you type some text and press Up arrow
 Set-PSReadlineKeyHandler -Chord UpArrow -Function HistorySearchBackward
