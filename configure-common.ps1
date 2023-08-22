@@ -15,8 +15,9 @@ composer global require psy/psysh
 setx EDITOR "code --wait" /m
 setx GIT_EDITOR "code --wait" /m
 
+# install oh-my-posh and posh=git
 Install-Module posh-git -Scope CurrentUser
-Install-Module oh-my-posh -Scope CurrentUser
+winget install JanDeDobbeleer.OhMyPosh -s winget # see https://ohmyposh.dev/docs/installation/windows
 
 # install powerline fonts
 git clone https://github.com/powerline/fonts.git --depth=1
