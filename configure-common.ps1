@@ -27,6 +27,7 @@ Set-Location ..
 Remove-Item -Path fonts -Recurse -Force
 
 # Set in Windows Registry (speed up Windows Explorer by telling it to treat all folders as generic)
+# see https://twitter.com/timonsku/status/1764306103720989115
 # [HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell]
 # "FolderType"="NotSpecified"
 
