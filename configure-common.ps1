@@ -26,7 +26,11 @@ Set-Location fonts
 Set-Location ..
 Remove-Item -Path fonts -Recurse -Force
 
+# Set in Windows Registry (speed up Windows Explorer by telling it to treat all folders as generic)
+# [HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell]
+# "FolderType"="NotSpecified"
+
 # Enable Developer Mode
 Set-ItemProperty "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" "AllowDevelopmentWithoutDevLicense" 1
-# Bash on Windows
+# WSL
 Enable-WindowsOptionalFeature -Online -All -FeatureName "Microsoft-Windows-Subsystem-Linux" -NoRestart -WarningAction SilentlyContinue | Out-Null
